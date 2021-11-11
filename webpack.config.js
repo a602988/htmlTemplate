@@ -3,15 +3,20 @@ const Dotenv = require('dotenv-webpack');
 const path = require("path");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
+// add
+const HtmlWebpackPlugin = require('html-webpack-plugin');// HTML 文件的创建
+
+
 module.exports = {
-    // Define the entry points of our application (can be multiple for different sections of a website)
+
+    mode: 'development',
     entry: {
         main: './src/js/main.js',
+        vendor: './src/vendor.js',
     },
 
-    // Define the destination directory and filenames of compiled resources
     output: {
-        filename: "js/[name].js",
+        filename: "js/[name].bundle.js",
         path: path.resolve(__dirname, "./dist")
     },
 
@@ -23,9 +28,9 @@ module.exports = {
         rules: [
             // Use babel for JS files
             {
-                test: /\.js$/,
+                test: /\.js$/,//test 属性，识别出哪些文件会被转换。
                 exclude: /(node_modules)/,
-                use: {
+                use: {//use 属性，定义出在进行转换时，应该使用哪个 loader。
                     loader: "babel-loader",
                     options: {
                         presets: [
@@ -74,6 +79,13 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "css/[name].css",
             chunkFilename: "[id].css"
+        }),
+
+        //add -------
+        // html 創建
+        new HtmlWebpackPlugin({
+            //不壓縮html
+            minify: process.env.NODE_ENV == 'development' ? false : false,
         }),
     ],
 };
