@@ -3,8 +3,6 @@ const Dotenv = require('dotenv-webpack');
 const path = require("path");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
-// add
-const HtmlWebpackPlugin = require('html-webpack-plugin');// HTML 文件的创建
 
 
 module.exports = {

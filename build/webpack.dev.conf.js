@@ -1,0 +1,1 @@
+const common = require('./webpack.base.conf.js');

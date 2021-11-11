@@ -1,14 +1,11 @@
-# Bootstrap 5 + WebPack 5 = Boilerplate
+# 結構說明
 
-This is a professional front-end template for building web apps and sites faster, without having to create the basic
-setup on your own, every time you start a new project.
-
-The template is based on the [Bootstrap Framework](http://getbootstrap.com/) in version 5 and
-uses [Webpack](https://webpack.js.org/) in version 5 as a flexible and modern module bundler. All common features for
-front-end projects (like SCSS compilation, minifying of Assets, etc.) are included out of the box.
-
-In addition to the basic front-end project setup, I added some cool features like a configurable image resizing command
-to make generating responsive images a breeze.
+│
+├─── build/
+│   │
+│   ├─── webpack.base.conf.js     # Webpack 共用配置檔 (等待合併)
+│   ├─── webpack.dev.conf.js      # 開發環境配置檔
+│   └─── webpack.prod.conf.js     # 生產環境配置檔
 
 ## Table of Contents
 
