@@ -1,0 +1,1 @@
+{"version":3,"file":"js/vendor.bundle.js","mappings":"AAAAA,QAAQC,IAAR","sources":["webpack://htmlTemplate/./src/js/vendor.js"],"sourcesContent":["console.log(`vendor`);"],"names":["console","log"],"sourceRoot":""}

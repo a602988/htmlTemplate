@@ -1,20 +1,20 @@
 # 結構說明
-
+```
 │
 ├─── build/
 │   │
 │   ├─── webpack.base.conf.js     # Webpack 共用配置檔 (等待合併)
 │   ├─── webpack.dev.conf.js      # 開發環境配置檔
 │   └─── webpack.prod.conf.js     # 生產環境配置檔
+├─── postcss.config.js 瀏覽器相容設定檔
+```
+## 使用套件
 
-## Table of Contents
+- webpack-merge 合併檔案
+- css-loader 單純將 entry 內相關的 CSS 檔案抽取出來做轉換
+- style-loader 將 CSS 注入到 HTML 的 <style> 標籤上
+  https://awdr74100.github.io/2020-03-02-webpack-minicssextractplugin/
 
-1. [Requirements](#1-requirements)
-1. [Quick Start](#2-quick-start)
-1. [Environment Configuration](#3-environment-configuration)
-1. [Adding Google Fonts](#4-adding-google-fonts)
-1. [Adding Responsive Images](#5-adding-responsive-images)
-1. [Image Credits](#6-image-credits)
 
 ## 1. Requirements
 

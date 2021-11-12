@@ -4,8 +4,8 @@
   "description": "A simple boilerplate using Bootstrap 5, Webpack and Babel.",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config build/webpack.prod.conf.js --mode production",
-    "dev": "webpack --config build/webpack.dev.conf.js --mode development --watch",
+    "build": "webpack --config build/webpack.base.conf.js --mode production",
+    "dev": "webpack --config build/webpack.base.conf.js --mode development --watch",
     "images": "node ./bin/images.js"
   },
   "author": "Jean Lin",
@@ -24,6 +24,7 @@
     "css-loader": "^6.0.0",
     "dotenv-webpack": "^7.0.3",
     "fast-glob": "^3.2.7",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "mime-types": "^2.1.32",
     "mini-css-extract-plugin": "^2.2.0",
