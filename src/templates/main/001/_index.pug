@@ -1,0 +1,21 @@
+//-載入設定值
+extends _confing.pug
+include _layoutMixin.pug
+//-開始layout
+block layout
+    doctype html
+    html(lang="tw")
+        head
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            block title
+            block head
+        body
+            +header
+
+            .main-container
+                main.main-content
+                    +breadcrumb
+                    block content
+                +sidebar
+            +footer
+

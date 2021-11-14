@@ -21,10 +21,12 @@
     "autoprefixer": "^10.3.3",
     "babel-loader": "^8.2.2",
     "bootstrap": "^5.1.0",
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.0.0",
     "dotenv-webpack": "^7.0.3",
     "fast-glob": "^3.2.7",
     "file-loader": "^6.2.0",
+    "html-loader": "^3.0.1",
     "html-webpack-plugin": "^5.5.0",
     "mime-types": "^2.1.32",
     "mini-css-extract-plugin": "^2.2.0",
@@ -40,5 +42,8 @@
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0",
     "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "pug-html-loader": "^1.1.5"
   }
 }

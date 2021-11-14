@@ -2,17 +2,21 @@ const webpack = require("webpack");
 const Dotenv = require('dotenv-webpack');
 const path = require("path");
 
-
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 //將css獨立出來
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+//清除dist
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-
+// 產出 html
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const htmlconfig =require("./html-config");
+const htmlarr=[];
+for(let i in htmlconfig) {
+    htmlarr.push(new HtmlWebpackPlugin(htmlconfig[i]));
+}
 
 
 module.exports = {
-
-    //mode: 'development',
     entry: {
         main: './src/js/main.js',
         vendor: './src/js/vendor.js',
@@ -23,10 +27,8 @@ module.exports = {
         path: path.resolve(__dirname, "../dist")
     },
 
-    // Define development options
     devtool: "source-map",
 
-    // Define loaders
     module: {
         rules: [
             // Use babel for JS files
@@ -42,7 +44,6 @@ module.exports = {
                     }
                 }
             },
-            // CSS, PostCSS, and Sass
             {
                 test: /\.(scss|css)$/,
                 use: [
@@ -79,12 +80,33 @@ module.exports = {
                     },
                 ],
             },
+            {
+
+                test: /\.(pug)$/,
+                use: [
+                    {   //編譯html內的檔案，例如圖片
+                        loader: 'html-loader',
+                        options: {
+                            // 不壓縮 HTML
+                            minimize: false
+                        }
+                    },
+                    {   //編譯pug檔案
+                        loader: 'pug-html-loader',
+                        options: {
+                            // 美化 HTML 的編排 (不壓縮HTML的一種)
+                            pretty: true
+
+                        }
+                    }
+                ],
+
+            },
         ],
     },
 
-    // Define used plugins
     plugins: [
-        // Load .env file for environment variables in JS
+        // // Load .env file for environment variables in JS
         new Dotenv({
             path: "./.env"
         }),
@@ -95,11 +117,13 @@ module.exports = {
             chunkFilename: "[id].css"
         }),
 
-        //add -------
-        // html 創建
-        new HtmlWebpackPlugin({
-            //不壓縮html
-           minify: process.env.NODE_ENV == 'development' ? false : false,
-        }),
+        // 創建html
+        // new HtmlWebpackPlugin({
+        //    //不壓縮html
+        //    minify: process.env.NODE_ENV == 'development' ? false : false,
+        // }),
+        //清除dist
+        new CleanWebpackPlugin(),
+        ...htmlarr,
     ],
 };
