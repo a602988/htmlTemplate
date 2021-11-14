@@ -1,12 +1,12 @@
 const webpack = require("webpack");
 const Dotenv = require('dotenv-webpack');
 const path = require("path");
-
+//頁面 js 路徑
+const srcJsPath = './src/page';
 //將css獨立出來
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 //清除dist
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-
 // 產出 html
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const htmlconfig =require("./html-config");
@@ -20,11 +20,18 @@ module.exports = {
     entry: {
         main: './src/js/main.js',
         vendor: './src/js/vendor.js',
+        app:[//頁面用
+            srcJsPath + '/index/index.js',
+        ],
+        example:[//範例展示用
+            srcJsPath + '/example/index.js',
+            srcJsPath + '/index/index.js',
+        ],
     },
 
     output: {
         filename: "js/[name].bundle.js",
-        path: path.resolve(__dirname, "../dist")
+        path: path.resolve(__dirname, "../dist"),
     },
 
     devtool: "source-map",
@@ -66,19 +73,23 @@ module.exports = {
                             }
                         }
                     },
-                    'sass-loader'
+                    'sass-loader',
+
                 ],
             },
             {
-                test: /\.(png|jpe?g|gif)$/i,
-                use: [
-                    {
-                        loader: 'file-loader',//css內的圖片圖片打包處理
-                        options: {
-                            name: '[name].[ext]',
-                        },
-                    },
-                ],
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset',
+                generator: {
+                    filename: 'img/[name].[hash:6][ext]', // 局部指定输出位置
+                    // publicPath:'./img',
+                    // outputPath:'img/'
+                },
+                // parser: {
+                //     dataUrlCondition: {
+                //         maxSize: 8 * 1024 // 限制于 8kb，小於此的將轉為base64
+                //     }
+                // }
             },
             {
 
@@ -102,6 +113,10 @@ module.exports = {
                 ],
 
             },
+            {
+                test:/\.html$/,
+                loader:'html-loader',
+            }
         ],
     },
 
@@ -126,4 +141,12 @@ module.exports = {
         new CleanWebpackPlugin(),
         ...htmlarr,
     ],
+    resolve: {
+        alias: {
+            //別名新增，用於js or css 載入時 import '@/css/index.css
+            '@': path.resolve(__dirname, '../src'),
+            // 下面可以继续新增别名
+        }
+    }
+
 };
