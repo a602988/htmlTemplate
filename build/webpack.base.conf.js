@@ -5,8 +5,7 @@ const path = require("path");
 const srcJsPath = './src/page';
 //將css獨立出來
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-//清除dist
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 // 產出 html
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const htmlconfig =require("./html-config");
@@ -32,6 +31,7 @@ module.exports = {
     output: {
         filename: "js/[name].bundle.js",
         path: path.resolve(__dirname, "../dist"),
+        clean: true,
     },
 
     devtool: "source-map",
@@ -51,45 +51,57 @@ module.exports = {
                     }
                 }
             },
+            // {
+            //     test: /\.(scss|css)$/,
+            //     use: [
+            //         MiniCssExtractPlugin.loader,//將css獨立出來
+            //         {
+            //             loader: "css-loader",//單純將 entry 內相關的 CSS 檔案抽取出來做轉換
+            //             options: {
+            //                 importLoaders: 2,
+            //                 sourceMap: true,
+            //                 url: false,
+            //             }
+            //         },
+            //         {
+            //             loader: 'postcss-loader',
+            //             options: {
+            //                 postcssOptions: {
+            //                     plugins: [
+            //                         'autoprefixer',//增加了相關的 CSS Prefix 瀏覽器相容度
+            //                     ]
+            //                 }
+            //             }
+            //         },
+            //         'sass-loader',
+            //
+            //     ],
+            // },
             {
                 test: /\.(scss|css)$/,
                 use: [
-                    MiniCssExtractPlugin.loader,//將css獨立出來
-                    {
-                        loader: "css-loader",//單純將 entry 內相關的 CSS 檔案抽取出來做轉換
-                        options: {
-                            importLoaders: 2,
-                            sourceMap: true,
-                            url: false,
-                        }
-                    },
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            postcssOptions: {
-                                plugins: [
-                                    'autoprefixer',//增加了相關的 CSS Prefix 瀏覽器相容度
-                                ]
-                            }
-                        }
-                    },
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
                     'sass-loader',
-
                 ],
             },
+            // {
+            //     test: /\.(png|svg|jpg|jpeg|gif)$/i,
+            //     type: 'asset/resource',
+            //     generator: {
+            //         filename: 'img/[name].[hash:6][ext]', // 局部指定输出位置
+            //         // publicPath:'./img',
+            //         // outputPath:'img/'
+            //     },
+            //     // parser: {
+            //     //     dataUrlCondition: {
+            //     //         maxSize: 8 * 1024 // 限制于 8kb，小於此的將轉為base64
+            //     //     }
+            //     // }
+            // },
             {
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: 'asset',
-                generator: {
-                    filename: 'img/[name].[hash:6][ext]', // 局部指定输出位置
-                    // publicPath:'./img',
-                    // outputPath:'img/'
-                },
-                // parser: {
-                //     dataUrlCondition: {
-                //         maxSize: 8 * 1024 // 限制于 8kb，小於此的將轉為base64
-                //     }
-                // }
+                test: /\.html$/i,
+                loader: "html-loader",
             },
             {
 
@@ -137,8 +149,6 @@ module.exports = {
         //    //不壓縮html
         //    minify: process.env.NODE_ENV == 'development' ? false : false,
         // }),
-        //清除dist
-        new CleanWebpackPlugin(),
         ...htmlarr,
     ],
     resolve: {
