@@ -21,12 +21,27 @@ module.exports = {
         title: "首頁",
         filename: distPath + 'index.html',
         template: srcTem + 'index/index.pug',
+        chunks: ['app'],
 
     }, ...page},
     preloader: {...{
             title: "preloader",
             filename: distPath + 'preloader.html',
             template: srcTem + 'preloader/pace-js/index.pug',
+            chunks: ['app','preloader'],
+
+    }, ...page},
+    preloader01: {...{
+            title: "preloader01",
+            filename: distPath + 'preloader01.html',
+            template: srcTem + 'preloader/pace-js/index01.pug',
+            chunks: ['app','preloader'],
+
+        }, ...page},
+    preloader02: {...{
+            title: "preloader02",
+            filename: distPath + 'preloader02.html',
+            template: srcTem + 'preloader/pace-js/index02.pug',
             chunks: ['app','preloader'],
 
     }, ...page},

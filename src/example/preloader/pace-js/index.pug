@@ -1,9 +1,15 @@
 extends ../../_layouts/_main_basic.pug
-
+include in.pug
 block title
     title preloader
 block head
 
 block content
-    include in.pug
+    h1 preloader 進度條
+        ul
+            li
+                a.d-block(href="preloader01.html") preloader01
+                small 使用 pace-js ，檔案路徑：src/example/preloader/index01.pug
+
+
 
