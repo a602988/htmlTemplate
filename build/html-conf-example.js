@@ -34,16 +34,16 @@ module.exports = {
     preloader01: {...{
             title: "preloader01",
             filename: distPath + 'preloader01.html',
-            template: srcTem + 'preloader/pace-js/index01.pug',
+            template: srcTem + 'preloader/pace-js/01/index.pug',
             chunks: ['app','preloader'],
 
         }, ...page},
-    preloader02: {...{
-            title: "preloader02",
-            filename: distPath + 'preloader02.html',
-            template: srcTem + 'preloader/pace-js/index02.pug',
-            chunks: ['app','preloader'],
-
-    }, ...page},
+    // preloader02: {...{
+    //         title: "preloader02",
+    //         filename: distPath + 'preloader02.html',
+    //         template: srcTem + 'preloader/pace-js/preloader02.pug',
+    //         chunks: ['app','preloader'],
+    //
+    // }, ...page},
 
 };

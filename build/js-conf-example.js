@@ -11,5 +11,5 @@ module.exports = {
     srcAssets + '/js/main.js',
   ],
   //範例preloader
-  preloader:srcTem + 'preloader/pace-js/index.js',
+  preloader:srcTem + 'preloader/pace-js/01/index.js',
 };
