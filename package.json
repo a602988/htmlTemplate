@@ -53,7 +53,10 @@
     "yamljs": "^0.3.0"
   },
   "dependencies": {
+    "jquery": "^3.5.1",
     "lodash": "^4.17.21",
+    "pace": "0.0.4",
+    "pace-js": "^1.2.4",
     "pug-html-loader": "^1.1.5",
     "xml-loader": "^1.2.1"
   }

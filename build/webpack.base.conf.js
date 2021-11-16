@@ -1,14 +1,15 @@
-const webpack = require("webpack");
+const path = require('path');
+//可讀取.env檔
 const Dotenv = require('dotenv-webpack');
-const path = require("path");
-//頁面 js 路徑
-const srcJsPath = './src/page';
-//將css獨立出來
+//獨立css
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
+// entry js進入的檔案內容
+const jsconfig =require("./js-conf-example");
 
 // 產出 html
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const htmlconfig =require("./html-config");
+const htmlconfig =require("./html-conf-example");
 const htmlarr=[];
 for(let i in htmlconfig) {
     htmlarr.push(new HtmlWebpackPlugin(htmlconfig[i]));
@@ -16,67 +17,35 @@ for(let i in htmlconfig) {
 
 
 module.exports = {
-    entry: {
-        main: './src/js/main.js',
-        vendor: './src/js/vendor.js',
-        app:[//頁面用
-            srcJsPath + '/index/index.js',
-        ],
-        example:[//範例展示用
-            srcJsPath + '/example/index.js',
-            srcJsPath + '/index/index.js',
-        ],
+    devServer: {
+        static: './dist',
+        hot: true,
     },
-
+    entry: jsconfig,
     output: {
-        filename: "js/[name].bundle.js",
-        path: path.resolve(__dirname, "../dist"),
+        filename: 'js/[name].js',
+        path: path.resolve(__dirname, '../dist'),
+        library: {
+            name: 'webpackNumbers',
+            type: 'umd',
+        },
         clean: true,
     },
-
-    devtool: "source-map",
-
+    optimization: { //自動拆出共用的js
+        moduleIds: 'deterministic',
+        runtimeChunk: 'single',
+        splitChunks: {
+            cacheGroups: {
+                vendor: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: 'vendors',
+                    chunks: 'all',
+                },
+            },
+        },
+    },
     module: {
         rules: [
-            // Use babel for JS files
-            {
-                test: /\.js$/,//test 属性，识别出哪些文件会被转换。
-                exclude: /(node_modules)/,
-                use: {//use 属性，定义出在进行转换时，应该使用哪个 loader。
-                    loader: "babel-loader",
-                    options: {
-                        presets: [
-                            "@babel/preset-env"
-                        ]
-                    }
-                }
-            },
-            // {
-            //     test: /\.(scss|css)$/,
-            //     use: [
-            //         MiniCssExtractPlugin.loader,//將css獨立出來
-            //         {
-            //             loader: "css-loader",//單純將 entry 內相關的 CSS 檔案抽取出來做轉換
-            //             options: {
-            //                 importLoaders: 2,
-            //                 sourceMap: true,
-            //                 url: false,
-            //             }
-            //         },
-            //         {
-            //             loader: 'postcss-loader',
-            //             options: {
-            //                 postcssOptions: {
-            //                     plugins: [
-            //                         'autoprefixer',//增加了相關的 CSS Prefix 瀏覽器相容度
-            //                     ]
-            //                 }
-            //             }
-            //         },
-            //         'sass-loader',
-            //
-            //     ],
-            // },
             {
                 test: /\.(scss|css)$/,
                 use: [
@@ -85,26 +54,29 @@ module.exports = {
                     'sass-loader',
                 ],
             },
-            // {
-            //     test: /\.(png|svg|jpg|jpeg|gif)$/i,
-            //     type: 'asset/resource',
-            //     generator: {
-            //         filename: 'img/[name].[hash:6][ext]', // 局部指定输出位置
-            //         // publicPath:'./img',
-            //         // outputPath:'img/'
-            //     },
-            //     // parser: {
-            //     //     dataUrlCondition: {
-            //     //         maxSize: 8 * 1024 // 限制于 8kb，小於此的將轉為base64
-            //     //     }
-            //     // }
-            // },
             {
-                test: /\.html$/i,
-                loader: "html-loader",
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'images/[name][ext][query]'
+                }
             },
             {
-
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'fonts/[name][ext][query]'
+                }
+            },
+            {   //解析html原始碼與圖片
+                test: /\.html$/i,
+                loader: "html-loader",
+                options: {
+                    minimize: false,
+                },
+            },
+            {
+                //解析pug原始碼與圖片
                 test: /\.(pug)$/,
                 use: [
                     {   //編譯html內的檔案，例如圖片
@@ -125,38 +97,30 @@ module.exports = {
                 ],
 
             },
-            {
-                test:/\.html$/,
-                loader:'html-loader',
-            }
+
         ],
     },
-
     plugins: [
-        // // Load .env file for environment variables in JS
+        // // Load .env file
         new Dotenv({
             path: "./.env"
         }),
-
-        // 將css獨立出來
+        //將css獨立出來
         new MiniCssExtractPlugin({
-            filename: "css/[name].css",
-            chunkFilename: "[id].css"
+            filename: 'css/[name].css',
         }),
-
-        // 創建html
-        // new HtmlWebpackPlugin({
-        //    //不壓縮html
-        //    minify: process.env.NODE_ENV == 'development' ? false : false,
-        // }),
         ...htmlarr,
+
     ],
     resolve: {
         alias: {
-            //別名新增，用於js or css 載入時 import '@/css/index.css
-            '@': path.resolve(__dirname, '../src'),
-            // 下面可以继续新增别名
+            //路徑別名
+            //原始檔案
+            'src': path.resolve(__dirname, '../src'),
+            //資源
+            'assets': path.resolve(__dirname, '../src/assets'),
+            //圖片
+            'images': path.resolve(__dirname, '../src/assets/img'),
         }
     }
-
 };
