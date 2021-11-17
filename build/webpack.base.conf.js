@@ -23,7 +23,7 @@ module.exports = {
     },
     entry: jsconfig,
     output: {
-        filename: 'js/[name].js',
+        filename: 'js/[name].[contenthash].js',
         path: path.resolve(__dirname, '../dist'),
         library: {
             name: 'webpackNumbers',

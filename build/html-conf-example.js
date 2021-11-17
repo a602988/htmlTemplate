@@ -24,26 +24,35 @@ module.exports = {
         chunks: ['app'],
 
     }, ...page},
-    preloader: {...{
-            title: "preloader",
-            filename: distPath + 'preloader.html',
-            template: srcTem + 'preloader/pace-js/index.pug',
-            chunks: ['app','preloader'],
+
+    preloader_paceJs_01: {...{
+            title: "preloader_paceJs_01",
+            filename: distPath + 'preloader_paceJs_01.html',
+            template: srcTem + 'preloader/pace-js/01/index.pug',
+            chunks: ['app','preloader_paceJs_01'],
 
     }, ...page},
-    preloader01: {...{
-            title: "preloader01",
-            filename: distPath + 'preloader01.html',
-            template: srcTem + 'preloader/pace-js/01/index.pug',
-            chunks: ['app','preloader'],
+    preloader_paceJs_02: {...{
+        title: "preloader_paceJs_02",
+        filename: distPath + 'preloader_paceJs_02.html',
+        template: srcTem + 'preloader/pace-js/02/index.pug',
+        chunks: ['app','preloader_paceJs_02'],
 
-        }, ...page},
-    // preloader02: {...{
-    //         title: "preloader02",
-    //         filename: distPath + 'preloader02.html',
-    //         template: srcTem + 'preloader/pace-js/preloader02.pug',
-    //         chunks: ['app','preloader'],
-    //
-    // }, ...page},
+    }, ...page},
+    preloader_js_01: {...{
+      title: "preloader_js_01",
+      filename: distPath + 'preloader_js_01.html',
+      template: srcTem + 'preloader/js/01/index.pug',
+      chunks: ['app','preloader_js_01'],
+
+    }, ...page},
+
+    menu_js_01: {...{
+      title: "menu_js_01",
+      filename: distPath + 'menu_js_01.html',
+      template: srcTem + 'menu/js/01/index.html',
+      chunks: ['app','menu_js_01'],
+
+    }, ...page},
 
 };

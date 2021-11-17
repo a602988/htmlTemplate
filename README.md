@@ -31,8 +31,74 @@
 ` npm run server` 
 
 
-## 使用套件
+## 範例
 
 ### preloader
 
-- [pace-js](https://codebyzach.github.io/pace/)
+#### pace-js
+
+- [preloader01](preloader01.html)
+
+
+## 待研究範例
+
+jQuery – 使用 jquery.appear 取代 jquery.lazyload 非真實的延遲加載
+
+http://jsnwork.kiiuo.com/archives/312/jquery-%E4%BD%BF%E7%94%A8-jquery-appear-%E5%8F%96%E4%BB%A3-jquery-lazyload-%E9%9D%9E%E7%9C%9F%E5%AF%A6%E7%9A%84%E5%BB%B6%E9%81%B2%E5%8A%A0%E8%BC%89/
+
+範例網站：https://www.okler.net/previews/ezy/3.1.0/index.html
+
+----
+
+輪播
+
+https://owlcarousel2.github.io/OwlCarousel2/demos/demos.html
+
+範例網站：https://www.okler.net/previews/ezy/3.1.0/index.html
+
+---
+
+Lightbox
+
+https://dimsemenov.com/plugins/magnific-popup/
+
+範例網站：https://www.okler.net/previews/ezy/3.1.0/index.html
+
+----
+
+輕量svg 動畫
+
+https://maxwellito.github.io/vivus/
+
+
+----
+
+banner
+
+http://themes.semicolonweb.com/html/canvas/demo-beauty.html
+
+中間文字特效
+
+http://themes.semicolonweb.com/html/canvas/demo-cafe.html
+http://themes.semicolonweb.com/html/canvas/index-corporate.html
+
+
+
+----
+選單
+
+https://themeforest.net/item/canvas-the-multipurpose-html5-template/9228123
+
+右側跑出
+
+http://themes.semicolonweb.com/html/canvas/demo-photography.html
+
+中間
+
+http://themes.semicolonweb.com/html/canvas/demo-cafe.html
+
+
+
+
+
+

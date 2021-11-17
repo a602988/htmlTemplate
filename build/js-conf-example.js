@@ -11,5 +11,9 @@ module.exports = {
     srcAssets + '/js/main.js',
   ],
   //範例preloader
-  preloader:srcTem + 'preloader/pace-js/01/index.js',
+  preloader_paceJs_01:srcTem + 'preloader/pace-js/01/index.js',
+  preloader_paceJs_02:srcTem + 'preloader/pace-js/02/index.js',
+  preloader_js_01:srcTem + 'preloader/js/01/index.js',
+  //範例選單
+  menu_js_01:srcTem + 'preloader/js/01/index.js',
 };

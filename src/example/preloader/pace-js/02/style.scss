@@ -1,59 +1,72 @@
 //背景顏色
 $bgColor:#272727;
+//線條高度
+$lineHeight:12px;
 //線條顏色
 $lineColor:#b19777;
+//線條斑馬文顏色
+$lineColorBg:rgba(177, 151, 119, 0.2);
+//斑馬條文寬度
+$lineBgWidth:32px;
 
 .bodyColr{
-  background: $bgColor;
+  background: #ffffff;
 }
 
 /* ======= Preloader Style ======= */
 .pace {
   pointer-events: none;
   user-select: none;
-  z-index: 99999999999999;
+  overflow: hidden;
   position: fixed;
-  margin: auto;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  width: 400px;
-  border: 0px;
-  height: 1px;
+  z-index: 2000;
+}
+
+.pace-inactive {
+  display: none;
+}
+//橫線
+.pace .pace-progress {
+  background-color:$lineColor;
+  position: fixed;
+  top: 50%;
+  bottom: 0;
+  right: 100%;
+  width: 100%;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.05);
-  transition: all 1s;
-  .pace-progress {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    max-width: 300px;
-    position: fixed;
-    z-index: 99999999999999;
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 100%;
-    height: 100%;
-    width: 100%;
-    background: $lineColor;
-  }
-  &.pace-inactive {
-    width: 100vw;
-    opacity: 0;
-    .pace-progress {
-      max-width: 100vw;
-    }
-  }
+  height: $lineHeight;
+}
+//橫線背景斜線
+.pace .pace-activity {
+  position: fixed;
+  top: 50%;
+  right: - $lineBgWidth;
+  bottom: 0;
+  left: 0;
+  height:$lineHeight;
+  transform: translate3d(0, 0, 0);
+  background-image: linear-gradient(45deg, $lineColorBg 25%, transparent 25%, transparent 50%, $lineColorBg 50%, $lineColorBg 75%, transparent 75%, transparent);
+  background-size: $lineBgWidth $lineBgWidth;
+  animation: pace-theme-barber-shop-motion 800ms linear infinite;
+}
+
+@keyframes pace-theme-barber-shop-motion {
+  0% { transform: none; transform: none; }
+  100% { transform: translate(-$lineBgWidth, 0); transform: translate(-$lineBgWidth, 0); }
 }
 
 
-.preloader01 {
+// 遮罩
+#preloader.preloader02 {
   width: 100%;
   height: 100vh;
   overflow: hidden;
   position: fixed;
-  z-index: 9999999;
+  z-index: 1999;
   &:after,
   &:before {
     content: '';
@@ -62,8 +75,6 @@ $lineColor:#b19777;
     height: 50%;
     width: 100%;
     background: $bgColor;
-    -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-    -o-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
     transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   }
   &:before {
@@ -74,44 +85,13 @@ $lineColor:#b19777;
   }
   .isdone {
     visibility: hidden;
-    -webkit-transition-delay: 1.5s;
-    -o-transition-delay: 1.5s;
     transition-delay: 1.5s;
   }
   &.isdone:after,
   &.isdone:before {
     height: 0;
-    -webkit-transition: all 0.7s cubic-bezier(1, 0, 0.55, 1);
-    -o-transition: all 0.7s cubic-bezier(1, 0, 0.55, 1);
     transition: all 0.7s cubic-bezier(1, 0, 0.55, 1);
-    -webkit-transition-delay: 1s;
-    -o-transition-delay: 1s;
     transition-delay: 1s;
   }
 }
-
-.loading-text {
-  font-size: 40px;
-  font-weight: 400;
-  letter-spacing: 4px;
-  position: absolute;
-  top: calc(50% - 30px);
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  color: $lineColor;
-  font-family: 'Oswald', sans-serif;
-  z-index: 9999;
-  .isdone {
-    top: 50%;
-    opacity: 0;
-    -webkit-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
-    -o-transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
-    transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
-    -webkit-transition-delay: .5s;
-    -o-transition-delay: .5s;
-    transition-delay: .5s;
-  }
-
-}
+/* ======= Preloader Style end ======= */
