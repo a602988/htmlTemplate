@@ -14,12 +14,28 @@ block content
             span
             span
             span
-        nav.navbar.shadow
-            .row
-                .col-auto
-                    a.logo(href="index.html" alt="回首頁")
-                        img(src="~images/page/logo.png" alt=companyName)
-
-
+        nav.navbar.shadow.navbar-expand-lg
+            a.navbar-brand(href="index.html" alt="回首頁")
+                img(src="~img/page/logo.png" alt=companyName)
+            .collapse.navbar-collapse.show
+                ul.navbar-nav.justify-content-center.flex-grow-1
+                    li.nav-item
+                        a.nav-link.actvie(href="about.html" title="關於永達") 關於永達
+                    li.nav-item
+                        a.nav-link(href="about.html" title="最新消息") 最新消息
+                    li.nav-item
+                        a.nav-link(href="about.html" title="核心技術") 核心技術
+                    li.nav-item
+                        a.nav-link(href="about.html" title="產品技術") 產品技術
+                    li.nav-item
+                        a.nav-link(href="about.html" title="支援服務") 支援服務
+                    li.nav-item
+                        a.nav-link(href="about.html" title="會員招募") 會員招募
+                    li.nav-item
+                        a.nav-link(href="about.html" title="聯絡我們") 聯絡我們
+                .nav-sub
+                    ul.nav
+                        li.nav-item
+                            a.nav-link.actvie(href="about.html" title="關於永達") 關於永達
 
 

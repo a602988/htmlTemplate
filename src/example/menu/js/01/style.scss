@@ -18,24 +18,26 @@
 .header{
   position: fixed;
   top:0;
-  left: 0;
-  right: 0;
+  width: 100%;
 }
 
 /* ======= navbar Style ======= */
+/* 選單底 */
 .navbar{
+  $navbarWidth:80%;
   position: absolute;
   top:2vh;
-  left:5%;
+  left:(100% - $navbarWidth)/2;
   height: 100px;
   border-radius: 60px;
   background-color: var(--color-light);
-  width: 85vw;
-  position: relative;
-  .logo{
-    padding:50% 30px 0 30px;
-    transform: translateY(-50%);
+  width: $navbarWidth;
+  .navbar-brand{
+    margin-left: 35px;
   }
+}
+.nav-right-wp{
+  background-color: var(--color-dark);
 }
 /* 選單按鈕 */
 .navbar-toggler {
@@ -76,7 +78,7 @@
     }
   }
   &.btn-dark {
-    background-color: var(--color-body);
+    background-color: var(--color-dark);
     span {
       background-color: var(--color-white);
     }

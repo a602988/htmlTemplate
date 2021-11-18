@@ -65,7 +65,7 @@ module.exports = {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'images/[name][ext][query]'
+                    filename: 'img/[name][ext][query]'
                 }
             },
             {
@@ -112,10 +112,6 @@ module.exports = {
         new Dotenv({
             path: "./.env"
         }),
-        //將css獨立出來
-        new MiniCssExtractPlugin({
-            filename: 'css/[name].css',
-        }),
         ...htmlarr,
 
     ],
@@ -127,7 +123,7 @@ module.exports = {
             //資源
             'assets': path.resolve(__dirname, '../src/assets'),
             //圖片
-            'images': path.resolve(__dirname, '../src/assets/img'),
+            'img': path.resolve(__dirname, '../src/assets/img'),
         }
     }
 };
