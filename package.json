@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --config build/webpack.prod.conf.js",
     "start": "webpack serve --open --config build/webpack.dev.conf.js",
-    "server": "node server.js",
+    "server": "webpack serve --open --config build/webpack.dev.conf.js",
     "images": "node ./bin/images.js"
   },
   "author": "Jean Lin",
@@ -47,7 +47,7 @@
     "url-loader": "^4.1.1",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0",
-    "webpack-dev-middleware": "^5.2.1",
+    "webpack-dev-middleware": "^5.2.2",
     "webpack-dev-server": "^4.5.0",
     "webpack-merge": "^5.8.0",
     "yamljs": "^0.3.0"

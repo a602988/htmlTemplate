@@ -50,7 +50,7 @@ module.exports = {
     menu_js_01: {...{
       title: "menu_js_01",
       filename: distPath + 'menu_js_01.html',
-      template: srcTem + 'menu/js/01/index.html',
+      template: srcTem + 'menu/js/01/index.pug',
       chunks: ['app','menu_js_01'],
 
     }, ...page},

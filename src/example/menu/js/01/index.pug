@@ -1,12 +1,25 @@
 extends ../../../../example/_layouts/_main_basic
 
+
+
 block title
-    title preloader
+    title menu
 block head
 
 block content
-    include in.pug
-    p 內容文字
+    //include in.pug
+    - var companyName = "公司名稱";
+    header.header
+        button.navbar-toggler.btn-dark
+            span
+            span
+            span
+        nav.navbar.shadow
+            .row
+                .col-auto
+                    a.logo(href="index.html" alt="回首頁")
+                        img(src="~images/page/logo.png" alt=companyName)
+
 
 
 

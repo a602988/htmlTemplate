@@ -15,5 +15,5 @@ module.exports = {
   preloader_paceJs_02:srcTem + 'preloader/pace-js/02/index.js',
   preloader_js_01:srcTem + 'preloader/js/01/index.js',
   //範例選單
-  menu_js_01:srcTem + 'preloader/js/01/index.js',
+  menu_js_01:srcTem + 'menu/js/01/index.js',
 };

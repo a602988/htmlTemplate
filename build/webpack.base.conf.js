@@ -31,6 +31,13 @@ module.exports = {
         },
         clean: true,
     },
+    devServer: {
+        static: {
+            directory: path.join(__dirname, 'dist'),
+        },
+        compress: true,
+        port: 3000,
+    },
     optimization: { //自動拆出共用的js
         moduleIds: 'deterministic',
         runtimeChunk: 'single',

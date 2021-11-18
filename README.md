@@ -81,7 +81,9 @@ http://themes.semicolonweb.com/html/canvas/demo-beauty.html
 
 http://themes.semicolonweb.com/html/canvas/demo-cafe.html
 http://themes.semicolonweb.com/html/canvas/index-corporate.html
+https://preview.themeforest.net/item/stylex-creative-showcase-portfolio-html-template/full_screen_preview/34810301?_ga=2.167057021.255208473.1637206532-1396119218.1596510868
 
+http://preview.themeforest.net/item/niro-creative-portfolio-agency-html5-template/full_screen_preview/29817460?_ga=2.190831592.255208473.1637206532-1396119218.1596510868
 
 
 ----
@@ -97,8 +99,25 @@ http://themes.semicolonweb.com/html/canvas/demo-photography.html
 
 http://themes.semicolonweb.com/html/canvas/demo-cafe.html
 
+loading
+
+https://preview.themeforest.net/item/lala-multipurpose-html-template/full_screen_preview/30918466?_ga=2.264587151.1260689906.1637202267-1396119218.1596510868
+
+http://preview.themeforest.net/item/grida-creative-agency-ajax-portfolio-personal-html-template/full_screen_preview/30255977?_ga=2.3479155.255208473.1637206532-1396119218.1596510868
+
+https://thetav.online/html/return/main/index.html
+
+
+https://alioth-html.pethemes.com/dark/home-fullscreen-slider.html
+
+https://preview.themeforest.net/item/leverage-creative-agency-corporate-and-startups-multipurpose-template/full_screen_preview/25988106?_ga=2.234387805.255208473.1637206532-1396119218.1596510868
+
+http://themehelite.com/themeforest/panorama/index.html
 
 
 
+背景特效
 
+
+https://preview.themeforest.net/item/legendary-one-page-parallax-html-template/full_screen_preview/17976316?_ga=2.234387805.255208473.1637206532-1396119218.1596510868
 
