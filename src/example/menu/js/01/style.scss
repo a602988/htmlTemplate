@@ -10,11 +10,7 @@
   --color-white: #ffffff;
 }
 
-.navbar-toggler{
-  position: fixed;
-  right: 3%;
-  top:4%;
-}
+
 .header{
   position: fixed;
   top:0;
@@ -22,30 +18,33 @@
 }
 
 /* ======= navbar Style ======= */
-/* 選單底 */
-.navbar{
-  $navbarWidth:80%;
-  position: absolute;
-  top:2vh;
-  left:(100% - $navbarWidth)/2;
-  height: 100px;
-  border-radius: 60px;
-  background-color: var(--color-light);
-  width: $navbarWidth;
-  .navbar-brand{
-    margin-left: 35px;
-  }
+
+/* 選單按鈕 動畫ㄋ*/
+.navbar-toggler{
+  position: fixed;
+  right: 2%;
+  top:3%;
+  opacity: 1;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+
 }
-.nav-right-wp{
-  background-color: var(--color-dark);
+.header-active{
+  .navbar-toggler{
+    top:3%;
+    right: 7%;
+    opacity: 0;
+  }
 }
 /* 選單按鈕 */
 .navbar-toggler {
-  height: 60px;
-  width: 60px;
+
+  height: 80px;
+  width: 80px;
   background-color: var(--color-light);
   border: none;
-  border-radius: 50%;
+  border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,7 +55,7 @@
   }
   span {
     height: 2px;
-    width: 20px;
+    width: 26px;
     background-color: var(--color-dark);
     margin-bottom: 4px;
     border-radius: 10px;
@@ -92,3 +91,148 @@
 }
 
 
+
+/* 選單底 */
+.header .navbar{
+  padding: 0;
+  $navbarWidth:85%;
+  position: absolute;
+  top:2vh;
+  left:(100% - $navbarWidth)/2;
+  height: 100px;
+  border-radius: 60px;
+  background-color: var(--color-light);
+  width: $navbarWidth;
+  .navbar-brand{
+    margin-left: 35px;
+  }
+}
+/*主選單*/
+.header .nav-top-main{
+  height: 100%;
+  ul{
+    padding: 0 3%;
+    height: 100%;
+    align-items: stretch;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    li{
+      text-align: center;
+      position: relative;
+      font-size: 1.13rem;
+      flex-grow: 1;
+
+      a{
+        display: inline-block;
+        color:#323232;
+        height: 100%;
+        font-weight: bold;
+        position: relative;
+        span{
+          display: inline-block;
+          margin-top: 67%;
+          transform: translateY(-50%);
+        }
+      }
+      a{
+        padding:0px !important;
+        &::before{
+          display: inline-block;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0%;
+          height: 10px;
+          background-color:  var(--color-dark);
+          content:'';
+          transition-property: width;
+          transition-duration: 0.5s;
+          transition-timing-function: ease;
+
+        }
+        &:hover{
+          &::before {
+            width: 100%;
+          }
+        }
+        &.active{
+          color:var(--color-dark);
+          &::before{
+            width: 100%;
+          }
+        }
+      }
+      &:after{
+        content:'．';
+        display: inline-block;
+        padding: 0;
+        color:#969696;
+        position: absolute;
+        top:50%;
+        right: -10px;
+        transform: translateY(-50%);
+      }
+      &:last-child{
+        &::after{
+          content:''
+        }
+      }
+    }
+
+  }
+}
+
+/*右側次選單區塊*/
+.nav-sub{
+  height: 100%;
+  background-color: var(--color-dark);
+  border-radius: 0 50px 50px 0;
+  padding: 0 2%;
+  align-items: center;
+  display: flex;
+
+
+}
+/*社群選單*/
+.nav-top-social{
+
+  i{
+    font-size: 22px;
+  }
+
+
+  a{
+    color:#ffffff;
+    &:hover{
+      color:rgba(255,255,255,0.5)
+    }
+  }
+}
+/*語系選單*/
+.nav-top-len{
+  align-items: center;
+  li{
+    &:after{
+      content:'|';
+      display: inline-block;
+      padding: 0 10px;
+      color:#FFFFFF;
+    }
+    &:last-child{
+      &:after{
+        content:''
+      }
+    }
+    a{
+      text-decoration: none;
+      color:rgba(255,255,255,0.5)
+    }
+
+    a.active{
+      color:rgba(255,255,255,1)
+    }
+
+  }
+
+}

@@ -70,6 +70,7 @@ https://dimsemenov.com/plugins/magnific-popup/
 
 https://maxwellito.github.io/vivus/
 
+https://animejs.com/
 
 ----
 

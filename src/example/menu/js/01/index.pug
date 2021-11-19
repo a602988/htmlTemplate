@@ -9,7 +9,7 @@ block head
 block content
     //include in.pug
     - var companyName = "公司名稱";
-    header.header
+    header.header#header
         button.navbar-toggler.btn-dark
             span
             span
@@ -17,25 +17,46 @@ block content
         nav.navbar.shadow.navbar-expand-lg
             a.navbar-brand(href="index.html" alt="回首頁")
                 img(src="~img/page/logo.png" alt=companyName)
-            .collapse.navbar-collapse.show
-                ul.navbar-nav.justify-content-center.flex-grow-1
+            .collapse.navbar-collapse.show.nav-top-main
+                ul.navbar-nav
                     li.nav-item
-                        a.nav-link.actvie(href="about.html" title="關於永達") 關於永達
+                        a.nav-link.active(href="about.html" title="關於永達")
+                            span 關於永達
                     li.nav-item
-                        a.nav-link(href="about.html" title="最新消息") 最新消息
+                        a.nav-link(href="about.html" title="最新消息")
+                            span 最新消息
                     li.nav-item
-                        a.nav-link(href="about.html" title="核心技術") 核心技術
+                        a.nav-link(href="about.html" title="核心技術")
+                            span 核心技術
                     li.nav-item
-                        a.nav-link(href="about.html" title="產品技術") 產品技術
+                        a.nav-link(href="about.html" title="產品技術")
+                            span 產品技術
                     li.nav-item
-                        a.nav-link(href="about.html" title="支援服務") 支援服務
+                        a.nav-link(href="about.html" title="支援服務")
+                            span 支援服務
                     li.nav-item
-                        a.nav-link(href="about.html" title="會員招募") 會員招募
+                        a.nav-link(href="about.html" title="會員招募")
+                            span 會員招募
                     li.nav-item
-                        a.nav-link(href="about.html" title="聯絡我們") 聯絡我們
-                .nav-sub
-                    ul.nav
-                        li.nav-item
-                            a.nav-link.actvie(href="about.html" title="關於永達") 關於永達
-
+                        a.nav-link(href="about.html" title="聯絡我們")
+                            span 聯絡我們
+            .nav-sub
+                ul.nav.nav-top-social
+                    li.nav-item
+                        a.nav-link.p-3(href="#" title="facebook" target="_blank")
+                            i.icon-social-facebook
+                    li.nav-item
+                        a.nav-link.p-3(href="#" title="instagram" target="_blank")
+                            i.icon-instagram
+                    li.nav-item
+                        a.nav-link.p-3(href="#" title="youtube" target="_blank")
+                            i.icon-youtube-play
+                    li.nav-item
+                        a.nav-link.p-3(href="#" title="會員中心" target="_blank")
+                            i.icon-users
+                ul.nav.ms-4.nav-top-len
+                    li.nav-item
+                        a.active(href="#" title="中文" target="_blank") 中
+                    li.nav-item
+                        a(href="#" title="English" target="_blank") EN
 
