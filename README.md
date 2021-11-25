@@ -76,6 +76,10 @@ https://animejs.com/
 
 banner
 
+https://transitionslider.com/templates
+
+https://themeforest.net/category/site-templates/creative
+
 http://themes.semicolonweb.com/html/canvas/demo-beauty.html
 
 中間文字特效
@@ -121,4 +125,8 @@ http://themehelite.com/themeforest/panorama/index.html
 
 
 https://preview.themeforest.net/item/legendary-one-page-parallax-html-template/full_screen_preview/17976316?_ga=2.234387805.255208473.1637206532-1396119218.1596510868
+
+電子型錄
+
+https://real3dflipbook.com/?aso=codecanyon_item_preview&aid=creativeinteractivemedia&aca
 
