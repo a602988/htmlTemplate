@@ -55,4 +55,12 @@ module.exports = {
 
     }, ...page},
 
+    menu_js_02: {...{
+            title: "menu_js_02",
+            filename: distPath + 'menu_js_02.html',
+            template: srcTem + 'menu/js/02/index.html',
+            chunks: ['app','menu_js_02'],
+
+        }, ...page},
+
 };

@@ -16,4 +16,5 @@ module.exports = {
   preloader_js_01:srcTem + 'preloader/js/01/index.js',
   //範例選單
   menu_js_01:srcTem + 'menu/js/01/index.js',
+  menu_js_02:srcTem + 'menu/js/02/index.js',
 };
