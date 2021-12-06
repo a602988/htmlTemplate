@@ -16,7 +16,7 @@ if (document.getElementById("preloader")) {
 
 //pace-js 結束後淡出
 Pace.on('done', function() {
-  $('#preloader').delay(500).fadeOut(800);
+  //$('#preloader').delay(500).fadeOut(800);
 });
 
 //PAGE LOADER END

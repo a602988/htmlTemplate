@@ -26,10 +26,14 @@
 
 ` npm run build` 
 
+
 運行server
 
 ` npm run server` 
 
+## 路徑
+
+圖片 ~img/  :來源為src/assets/img
 
 ## 範例
 

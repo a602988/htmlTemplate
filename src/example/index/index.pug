@@ -4,12 +4,19 @@ block title
 block head
 
 block content
-    h1 範例總覽
-    h2 preloader
-        ul
-            li
-                a.d-block(href="preloader_paceJs_01.html") (推)橫線線條中間變寬
-            li
-                a.d-block(href="preloader_paceJs_02.html") 橫線線條左到右+斑馬紋跑動
-            li
-                a.d-block(href="preloader_js_01.html") (推)無套件，純css+js，兩個球由小到大
+    .container
+        h1 範例總覽
+        h2 preloader
+        .row
+            .col-4
+                .card
+                    img.card-img-top(src="~img/test.jpg")
+                    .card-body
+                        h5.card-title 線條
+                    ul.list-group.list-group-flush
+                        li.list-group-item
+                            a.card-link(href="preloader_paceJs_01.html" target="_blank") (推)橫線線條中間變寬
+                        li.list-group-item
+                            a.card-link(href="preloader_paceJs_02.html" target="_blank") 橫線線條左到右+斑馬紋跑動
+                        li.list-group-item
+                            a.card-link(href="preloader_js_01.html" target="_blank") (推)無套件，純css+js，兩個球由小到大
