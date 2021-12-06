@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --config build/webpack.prod.conf.js",
     "start": "webpack serve --open --config build/webpack.dev.conf.js",
-    "server": "webpack serve --open --config build/webpack.dev.conf.js",
+    "server": "webpack serve --open --config server.js",
     "images": "node ./bin/images.js"
   },
   "author": "Jean Lin",
