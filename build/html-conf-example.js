@@ -39,11 +39,36 @@ module.exports = {
         chunks: ['app','preloader_paceJs_02'],
 
     }, ...page},
+
+    preloader_paceJs_03: {...{
+      title: "preloader_paceJs_03",
+      filename: distPath + 'preloader_paceJs_03.html',
+      template: srcTem + 'preloader/pace-js/03/index.pug',
+      chunks: ['app','preloader_paceJs_03'],
+
+    }, ...page},
+
+    preloader_paceJs_04: {...{
+      title: "preloader_paceJs_04",
+      filename: distPath + 'preloader_paceJs_04.html',
+      template: srcTem + 'preloader/pace-js/04/index.pug',
+      chunks: ['app','preloader_paceJs_04'],
+
+    }, ...page},
+
     preloader_js_01: {...{
       title: "preloader_js_01",
       filename: distPath + 'preloader_js_01.html',
       template: srcTem + 'preloader/js/01/index.pug',
       chunks: ['app','preloader_js_01'],
+
+    }, ...page},
+
+    preloader_js_02: {...{
+      title: "preloader_js_02",
+      filename: distPath + 'preloader_js_02.html',
+      template: srcTem + 'preloader/js/02/index.pug',
+      chunks: ['app','preloader_js_02'],
 
     }, ...page},
 
@@ -62,5 +87,7 @@ module.exports = {
             chunks: ['app','menu_js_02'],
 
         }, ...page},
+
+
 
 };

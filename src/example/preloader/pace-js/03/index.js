@@ -10,7 +10,8 @@ import Pace from 'pace-js'
 //判斷頁面有id preloader，才執行
 if (document.getElementById("preloader")) {
   Pace.start({
-    className: 'preloader01'
+    className: 'preloader03',
+    catchupTime: 0,
   });
 }
 

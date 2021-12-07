@@ -1,0 +1,73 @@
+/* ======= Preloader Style end ======= */
+
+.loader {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1111;
+  overflow-x: hidden;
+  background: #fff;
+}
+
+.loader-inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cssload-loader {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin: 2em;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+
+.cssload-loader,
+.cssload-loader:before,
+.cssload-loader:after {
+  animation: 1.15s infinite ease-in-out;
+}
+
+.cssload-loader:before,
+.cssload-loader:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(36, 204, 213);
+  transform: scale(0);
+  animation: cssload-animation 1.73s infinite ease-in-out;
+
+}
+
+.cssload-loader:after {
+  animation-delay: 0.86s;
+
+}
+
+@keyframes cssload-animation {
+  0% {
+    transform: translateX(-100%) scale(0);
+  }
+  50% {
+    transform: translateX(0%) scale(1);
+  }
+  100% {
+    transform: translateX(100%) scale(0);
+  }
+}
+
+
+
+/* ======= Preloader Style end ======= */

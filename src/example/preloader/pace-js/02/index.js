@@ -1,5 +1,4 @@
 //載入jquery
-import $ from "jquery";
 
 //載入pace-jg 樣式與npm js
 import './style.scss';
@@ -13,11 +12,6 @@ if (document.getElementById("preloader")) {
     className: 'preloader02'
   });
 }
-
-//pace-js 結束後淡出
-Pace.on('done', function() {
-  $('#preloader').delay(500).fadeOut(800);
-});
 
 
 //PAGE LOADER END
