@@ -87,7 +87,13 @@ module.exports = {
             chunks: ['app','menu_js_02'],
 
         }, ...page},
+    test_es6_01: {...{
+      title: "test_es6_01",
+      filename: distPath + 'test_es6_01.html',
+      template: srcTem + 'test/es6/01/index.pug',
+      chunks: ['app','test_es6_01'],
 
+    }, ...page},
 
 
 };
