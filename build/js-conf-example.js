@@ -22,5 +22,6 @@ module.exports = {
   menu_js_02:srcTem + 'menu/js/02/index.js',
   //測試用
   test_es6_01:srcTem + 'test/es6/01/index.js',
+  test_es6_02:srcTem + 'test/es6/02/index.js',
 
 };

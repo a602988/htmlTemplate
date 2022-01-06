@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4eed8504-bd72-4243-b745-0dceb463496f" name="更改" comment="選單menu01">
+      <change afterPath="$PROJECT_DIR$/src/example/test/es6/02/a2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/example/test/es6/02/in.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/example/test/es6/02/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/example/test/es6/02/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/example/test/es6/02/index.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/example/test/es6/02/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/html-conf-example.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/html-conf-example.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js-conf-example.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js-conf-example.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +49,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/example/test/es6" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/example/test/es6/02" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -51,11 +59,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/example/test/es6/02" />
       <recent name="$PROJECT_DIR$/src/example/test/es6" />
       <recent name="$PROJECT_DIR$/src/example/preloader/js" />
       <recent name="$PROJECT_DIR$/src/example/preloader/pace-js" />
       <recent name="$PROJECT_DIR$/src/assets/img/example" />
-      <recent name="$PROJECT_DIR$/src/assets/img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/example/index/img" />
@@ -93,7 +101,9 @@
       <workItem from="1636620934763" duration="60440000" />
       <workItem from="1637221968737" duration="71264000" />
       <workItem from="1638765760717" duration="18816000" />
-      <workItem from="1639038483003" duration="2387000" />
+      <workItem from="1639038483003" duration="3627000" />
+      <workItem from="1640573949776" duration="163000" />
+      <workItem from="1641439228170" duration="3930000" />
     </task>
     <task id="LOCAL-00001" summary="測試版本1">
       <created>1636622734756</created>
@@ -165,7 +175,21 @@
       <option name="project" value="LOCAL" />
       <updated>1639126892569</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="選單menu01">
+      <created>1639127763770</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1639127763770</updated>
+    </task>
+    <task id="LOCAL-00012" summary="選單menu01">
+      <created>1639638344149</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1639638344149</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

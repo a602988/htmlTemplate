@@ -95,5 +95,13 @@ module.exports = {
 
     }, ...page},
 
+    test_es6_02: {...{
+      title: "test_es6_02",
+      filename: distPath + 'test_es6_02.html',
+      template: srcTem + 'test/es6/02/index.html',
+      chunks: ['app'],
+
+    }, ...page},
+
 
 };
