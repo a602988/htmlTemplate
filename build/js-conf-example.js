@@ -20,6 +20,7 @@ module.exports = {
   //範例選單
   menu_js_01:srcTem + 'menu/js/01/index.js',
   menu_js_02:srcTem + 'menu/js/02/index.js',
+  menu_js_03:srcTem + 'menu/js/03/index.js',
   //測試用
   test_es6_01:srcTem + 'test/es6/01/index.js',
   test_es6_02:srcTem + 'test/es6/02/index.js',

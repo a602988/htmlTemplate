@@ -87,6 +87,13 @@ module.exports = {
             chunks: ['app','menu_js_02'],
 
         }, ...page},
+    menu_js_03: {...{
+      title: "menu_js_03",
+      filename: distPath + 'menu_js_03.html',
+      template: srcTem + 'menu/js/03/index.pug',
+      chunks: ['app','menu_js_03'],
+
+    }, ...page},
     test_es6_01: {...{
       title: "test_es6_01",
       filename: distPath + 'test_es6_01.html',

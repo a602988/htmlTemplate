@@ -1,0 +1,54 @@
+@media (min-width: 992px) {
+  #header .header-nav-main {
+    display: flex !important;
+    height: auto !important;
+    nav {
+      display: flex !important;
+      //第一層
+      .level-1 > li {
+        height: 100%;
+        align-self: stretch;
+        background-color: #e74c3c;
+        & > a {
+          display: inline-flex;
+          align-items: center;
+          padding: 0.5rem 1rem;
+          &::after {
+            display: none!important;
+          }
+        }
+      }
+      //第二層
+      .level-2{
+        top: -10000px;
+        display: block;
+        opacity: 0;
+        left: auto;
+        min-width: 200px;
+        padding: 5px 0;
+        li a {
+        }
+      }
+      //第三層
+      .level-3 >  li.dropdown-submenu {
+        position: relative;
+      }
+      //第四層
+      .level-4 {
+        left: 100%;
+        display: block;
+        margin-top: -8px;
+        margin-left: -1px;
+        border-radius: 4px;
+        opacity: 0;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
+
+  #header .header-nav-main nav > ul > li.dropdown:hover > .dropdown-menu {
+    top: auto;
+    display: block;
+    opacity: 1;
+  }
+}

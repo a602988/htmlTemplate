@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4eed8504-bd72-4243-b745-0dceb463496f" name="更改" comment="選單menu01">
-      <change afterPath="$PROJECT_DIR$/src/example/test/es6/02/a2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/example/test/es6/02/in.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/example/test/es6/02/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/example/test/es6/02/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/example/test/es6/02/index.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/example/test/es6/02/style.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/example/menu/js/03/in.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/example/menu/js/03/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/example/menu/js/03/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/example/menu/js/03/index.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/example/menu/js/03/style-.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/example/menu/js/03/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/html-conf-example.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/html-conf-example.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/js-conf-example.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js-conf-example.js" afterDir="false" />
     </list>
@@ -49,7 +50,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/example/test/es6/02" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/example/menu/js/03" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -59,11 +60,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/example/menu/js/03" />
+      <recent name="$PROJECT_DIR$/src/example/menu/js" />
       <recent name="$PROJECT_DIR$/src/example/test/es6/02" />
       <recent name="$PROJECT_DIR$/src/example/test/es6" />
       <recent name="$PROJECT_DIR$/src/example/preloader/js" />
-      <recent name="$PROJECT_DIR$/src/example/preloader/pace-js" />
-      <recent name="$PROJECT_DIR$/src/assets/img/example" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/example/index/img" />
@@ -103,7 +104,11 @@
       <workItem from="1638765760717" duration="18816000" />
       <workItem from="1639038483003" duration="3627000" />
       <workItem from="1640573949776" duration="163000" />
-      <workItem from="1641439228170" duration="3930000" />
+      <workItem from="1641439228170" duration="4551000" />
+      <workItem from="1642564587375" duration="97000" />
+      <workItem from="1642749250081" duration="7314000" />
+      <workItem from="1644822197890" duration="728000" />
+      <workItem from="1647319003519" duration="5454000" />
     </task>
     <task id="LOCAL-00001" summary="測試版本1">
       <created>1636622734756</created>
@@ -189,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639638344149</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="選單menu01">
+      <created>1641457949897</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1641457949897</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
