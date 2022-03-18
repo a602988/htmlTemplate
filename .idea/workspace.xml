@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/example/menu/js/03/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/menu/js/03/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/example/menu/js/03/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/menu/js/03/index.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/example/menu/js/03/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/menu/js/03/style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +103,7 @@
       <workItem from="1644822197890" duration="728000" />
       <workItem from="1647319003519" duration="5949000" />
       <workItem from="1647489283171" duration="240000" />
-      <workItem from="1647582100546" duration="7284000" />
+      <workItem from="1647582100546" duration="9148000" />
     </task>
     <task id="LOCAL-00001" summary="測試版本1">
       <created>1636622734756</created>
