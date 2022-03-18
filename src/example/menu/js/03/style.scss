@@ -46,8 +46,17 @@
     }
   }
 
-  #header .header-nav-main nav > ul > li.dropdown:hover > .dropdown-menu {
+  #header .header-nav-main nav > ul  li.dropdown:hover > .dropdown-menu {
     top: auto;
+    display: block;
+    opacity: 1;
+  }
+  .dropdown-submenu{
+    position: relative;
+  }
+  .dropdown-submenu:hover > .dropdown-menu {
+    left: 100%;
+    top: 0;
     display: block;
     opacity: 1;
   }

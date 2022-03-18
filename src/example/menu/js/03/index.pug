@@ -13,14 +13,34 @@ block content
                 .header-nav-main
                     nav
                         ul.nav.nav-pills.level-1
-                            li.dropdown
+                            li.dropdown.test1
                                 a.dropdown-item.dropdown-toggle menu
                                 ul.dropdown-menu.level-2
-                                    li
-                                        a.dropdown-item menu1
-                                    li
+                                    li.dropdown
+                                        a.dropdown-item.dropdown-toggle(data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") menu1menu1menu1menu1menu1menu1menu1menu1
+                                        ul.dropdown-menu.level-3
+                                            li
+                                                a.dropdown-item menu2-1-1menu2-1-1menu2-1-1menu2-1-1menu2-1-1menu2-1-1
+                                            li
+                                                a.dropdown-item menu2-1-2
+                                                ul.dropdown-menu.level-4
+                                                    li
+                                                        a.dropdown-item menu2-1-1
+                                                    li
+                                                        a.dropdown-item menu2-1-2
+                                    li.dropdown
                                         a.dropdown-item menu2
-                                    li.dropdown-submenu
+                                        ul.dropdown-menu.level-3
+                                            li
+                                                a.dropdown-item menu2-1-1
+                                            li
+                                                a.dropdown-item menu2-1-2
+                                                ul.dropdown-menu.level-4
+                                                    li
+                                                        a.dropdown-item menu2-1-1
+                                                    li
+                                                        a.dropdown-item menu2-1-2
+                                    li.dropdown
                                         a.dropdown-item.dropdown-toggle menu
                                         ul.dropdown-menu.level-3
                                             li
@@ -37,8 +57,13 @@ block content
                                 ul.dropdown-menu.level-2
                                     li
                                         a.dropdown-item menu1
-                                    li
-                                        a.dropdown-item menu2
+                                    li.dropdown-submenu
+                                        a.dropdown-item.dropdown-toggle menu
+                                        ul.dropdown-menu.level-3
+                                            li
+                                                a.dropdown-item menu2-1-1
+                                            li
+                                                a.dropdown-item menu2-1-2
                                     li.dropdown-submenu
                                         a.dropdown-item.dropdown-toggle menu
                                         ul.dropdown-menu.level-3

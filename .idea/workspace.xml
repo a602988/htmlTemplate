@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4eed8504-bd72-4243-b745-0dceb463496f" name="更改" comment="選單menu01">
-      <change afterPath="$PROJECT_DIR$/src/example/menu/js/03/in.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/example/menu/js/03/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/example/menu/js/03/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/example/menu/js/03/index.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/example/menu/js/03/style-.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/example/menu/js/03/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/html-conf-example.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/html-conf-example.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/js-conf-example.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js-conf-example.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/example/menu/js/03/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/menu/js/03/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/example/menu/js/03/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/menu/js/03/index.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/example/menu/js/03/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/menu/js/03/style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +102,9 @@
       <workItem from="1642564587375" duration="97000" />
       <workItem from="1642749250081" duration="7314000" />
       <workItem from="1644822197890" duration="728000" />
-      <workItem from="1647319003519" duration="5454000" />
+      <workItem from="1647319003519" duration="5949000" />
+      <workItem from="1647489283171" duration="240000" />
+      <workItem from="1647582100546" duration="7284000" />
     </task>
     <task id="LOCAL-00001" summary="測試版本1">
       <created>1636622734756</created>
