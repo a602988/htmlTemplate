@@ -1,11 +1,89 @@
 <!DOCTYPE html>
-<html lang="tw">
-  <head><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<link rel="icon" type="image/x-icon" href="img/favicon.ico">
-    <title>preloader</title>
-  <link href="css/app.css" rel="stylesheet"><link href="css/test_es6_01.css" rel="stylesheet"></head>
-  <body class="bodyColr">
-    <p>test</p>
-    <p>內容文字</p>
-  <script defer="defer" src="js/runtime.106b139bf5a4ed54e77d.js"></script><script defer="defer" src="js/vendors.e6af7871dea364ccf780.js"></script><script defer="defer" src="js/app.c6f4266409076cd604e2.js"></script><script defer="defer" src="js/test_es6_01.ca6477f5c484d5266476.js"></script></body>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Function scope example</title>
+  <style>
+    /*strong {*/
+    /*  text-align: center;*/
+    /*}*/
+    /*div {*/
+    /*  display: inline-block;*/
+    /*  width: 150px;*/
+    /*}*/
+    /*div p, ol, table {*/
+    /*  //border: 1px solid blue;*/
+    /*}*/
+    /*span, li, th, td {*/
+    /*  //border: 1px solid green;*/
+    /*}*/
+
+  </style>
+<link href="css/app.css" rel="stylesheet"><link href="css/test_es6_01.css" rel="stylesheet"></head>
+<body>
+  <div class="header-nav-main">
+    <ul>
+      <li class="dropdown">
+        <a href="#" class="dropdown-item dropdown-toggle">menu1</a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#" class="dropdown-item dropdown-toggle">menu1-1</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#" class="dropdown-item dropdown-toggle">menu1-1-1</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="dropdown-item dropdown-toggle">menu1-2</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#" class="dropdown-item dropdown-toggle">menu1-2-1</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">menu2</a>
+      </li>
+      <li class="dropdown">
+        <a href="#">menu3</a>
+      </li>
+    </ul>
+  </div>
+
+<script>
+  (function() {
+    var elt = document.getElementsByClassName('dropdown');
+    //console.log(elt.length);
+  })();
+  // function addClientRectsOverlay(elt) {
+  //   var rects = elt.getClientRects();
+  //   for (var i = 0; i != rects.length; i++) {
+  //     var rect = rects[i];
+  //     var tableRectDiv = document.createElement('div');
+  //     tableRectDiv.style.position = 'absolute';
+  //     tableRectDiv.style.border = '1px solid red';
+  //     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  //     var scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
+  //     tableRectDiv.style.margin = tableRectDiv.style.padding = '0';
+  //     tableRectDiv.style.top = (rect.top + scrollTop) + 'px';
+  //     tableRectDiv.style.left = (rect.left + scrollLeft) + 'px';
+  //     // We want rect.width to be the border width, so content width is 2px less.
+  //     tableRectDiv.style.width = (rect.width - 2) + 'px';
+  //     tableRectDiv.style.height = (rect.height - 2) + 'px';
+  //     document.body.appendChild(tableRectDiv);
+  //   }
+  //   console.log(rects);
+  // }
+  //
+  // (function() {
+  //   var elt = document.getElementsByClassName('withClientRectsOverlay');
+  //   for (var i = 0; i < elt.length; i++) {
+  //     addClientRectsOverlay(elt[i]);
+  //   }
+  // })();
+</script>
+<script defer="defer" src="js/runtime.106b139bf5a4ed54e77d.js"></script><script defer="defer" src="js/vendors.e6af7871dea364ccf780.js"></script><script defer="defer" src="js/app.c6f4266409076cd604e2.js"></script><script defer="defer" src="js/test_es6_01.ca6477f5c484d5266476.js"></script></body>
 </html>

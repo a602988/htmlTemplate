@@ -97,7 +97,7 @@ module.exports = {
     test_es6_01: {...{
       title: "test_es6_01",
       filename: distPath + 'test_es6_01.html',
-      template: srcTem + 'test/es6/01/index.pug',
+      template: srcTem + 'test/es6/01/index.html',
       chunks: ['app','test_es6_01'],
 
     }, ...page},

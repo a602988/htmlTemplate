@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Function scope example</title>
+  <style>
+    /*strong {*/
+    /*  text-align: center;*/
+    /*}*/
+    /*div {*/
+    /*  display: inline-block;*/
+    /*  width: 150px;*/
+    /*}*/
+    /*div p, ol, table {*/
+    /*  //border: 1px solid blue;*/
+    /*}*/
+    /*span, li, th, td {*/
+    /*  //border: 1px solid green;*/
+    /*}*/
+
+  </style>
+</head>
+<body>
+  <div class="header-nav-main">
+    <ul>
+      <li class="dropdown">
+        <a href="#" class="dropdown-item dropdown-toggle">menu1</a>
+        <ul class="dropdown-menu">
+          <li class="dropdown">
+            <a href="#" class="dropdown-item dropdown-toggle">menu1-1</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#" class="dropdown-item dropdown-toggle">menu1-1-1</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-item dropdown-toggle">menu1-2</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#" class="dropdown-item dropdown-toggle">menu1-2-1</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">menu2</a>
+      </li>
+      <li class="dropdown">
+        <a href="#">menu3</a>
+      </li>
+    </ul>
+  </div>
+
+<script>
+  (function() {
+    let elt = document.getElementsByClassName('dropdown-menu');
+    console.log(elt.length);
+    for (let i = 0; i < elt.length; i++) {
+      let val = elt[i].getBoundingClientRect();
+      console.log(val.x);
+    }
+  })();
+
+</script>
+</body>
+</html>
