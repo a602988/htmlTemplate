@@ -50,25 +50,24 @@
     .level-1{
 
       & > li:nth-of-type(1){
-        width: 95vw;
+        margin-left: 70vh;
+        width: 20vw;
       }
       & > li:nth-of-type(2){
-        width: 5vw;
+        width: 6vw;
       }
     }
     //ok
     .dropdown-menu{
       padding: 0;
+      display: block;
+      left:-10000px;
     }
     li.dropdown:hover > .level-2{
       top: auto;
       display: block;
       opacity: 1;
-    }
-    .level-2{
-      li{
-        width: 200px;
-      }
+      left:0;
     }
     .dropdown-submenu{
       position: relative;
@@ -79,9 +78,9 @@
       display: block;
       opacity: 1;
     }
-    .dropdown-submenu:hover > .dropdown-menu-right{
-      left:inherit;
-      right: 100%;
+    .dropdown-submenu:hover > .dropdown-menu-right,.dropdown:hover > .dropdown-menu-right{
+      left:inherit!important;
+      right: 0 !important;
     }
   }
 
