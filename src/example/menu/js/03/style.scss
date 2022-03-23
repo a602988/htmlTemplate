@@ -78,11 +78,13 @@
       display: block;
       opacity: 1;
     }
-    .dropdown-submenu:hover > .dropdown-menu-right,.dropdown:hover > .dropdown-menu-right{
+    .dropdown:hover > .dropdown-menu-right{
       left:inherit!important;
       right: 0 !important;
     }
+    .dropdown-submenu:hover > .dropdown-menu-right{
+      left:inherit!important;
+      right: 100% !important;
+    }
   }
-
-
 }
