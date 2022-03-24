@@ -98,7 +98,7 @@ module.exports = {
       title: "test_es6_01",
       filename: distPath + 'test_es6_01.html',
       template: srcTem + 'test/es6/01/index.html',
-      chunks: ['app','test_es6_01'],
+      chunks: ['test_es6_01'],
 
     }, ...page},
 
@@ -106,7 +106,7 @@ module.exports = {
       title: "test_es6_02",
       filename: distPath + 'test_es6_02.html',
       template: srcTem + 'test/es6/02/index.html',
-      chunks: ['app'],
+      chunks: ['test_es6_02'],
 
     }, ...page},
 

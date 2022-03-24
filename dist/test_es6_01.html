@@ -26,7 +26,7 @@
       <li class="dropdown">
         <a href="#" class="dropdown-item dropdown-toggle">menu1</a>
         <ul class="dropdown-menu">
-          <li>
+          <li class="dropdown">
             <a href="#" class="dropdown-item dropdown-toggle">menu1-1</a>
             <ul class="dropdown-menu">
               <li>
@@ -34,7 +34,7 @@
               </li>
             </ul>
           </li>
-          <li>
+          <li class="dropdown">
             <a href="#" class="dropdown-item dropdown-toggle">menu1-2</a>
             <ul class="dropdown-menu">
               <li>
@@ -55,35 +55,14 @@
 
 <script>
   (function() {
-    var elt = document.getElementsByClassName('dropdown');
-    //console.log(elt.length);
+    let elt = document.getElementsByClassName('dropdown-menu');
+    console.log(elt.length);
+    for (let i = 0; i < elt.length; i++) {
+      let val = elt[i].getBoundingClientRect();
+      console.log(val.x);
+    }
   })();
-  // function addClientRectsOverlay(elt) {
-  //   var rects = elt.getClientRects();
-  //   for (var i = 0; i != rects.length; i++) {
-  //     var rect = rects[i];
-  //     var tableRectDiv = document.createElement('div');
-  //     tableRectDiv.style.position = 'absolute';
-  //     tableRectDiv.style.border = '1px solid red';
-  //     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-  //     var scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
-  //     tableRectDiv.style.margin = tableRectDiv.style.padding = '0';
-  //     tableRectDiv.style.top = (rect.top + scrollTop) + 'px';
-  //     tableRectDiv.style.left = (rect.left + scrollLeft) + 'px';
-  //     // We want rect.width to be the border width, so content width is 2px less.
-  //     tableRectDiv.style.width = (rect.width - 2) + 'px';
-  //     tableRectDiv.style.height = (rect.height - 2) + 'px';
-  //     document.body.appendChild(tableRectDiv);
-  //   }
-  //   console.log(rects);
-  // }
-  //
-  // (function() {
-  //   var elt = document.getElementsByClassName('withClientRectsOverlay');
-  //   for (var i = 0; i < elt.length; i++) {
-  //     addClientRectsOverlay(elt[i]);
-  //   }
-  // })();
+
 </script>
-<script defer="defer" src="js/runtime.106b139bf5a4ed54e77d.js"></script><script defer="defer" src="js/vendors.e6af7871dea364ccf780.js"></script><script defer="defer" src="js/app.c6f4266409076cd604e2.js"></script><script defer="defer" src="js/test_es6_01.ca6477f5c484d5266476.js"></script></body>
+<script defer="defer" src="js/runtime.106b139bf5a4ed54e77d.js"></script><script defer="defer" src="js/vendors.e6af7871dea364ccf780.js"></script><script defer="defer" src="js/app.c6f4266409076cd604e2.js"></script><script defer="defer" src="js/test_es6_01.c0b996adcef895cbef90.js"></script></body>
 </html>
