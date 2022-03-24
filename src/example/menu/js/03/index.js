@@ -50,9 +50,13 @@ $(function() {
       if (totalW2 > windowWidth) {
         Class.addClass(nav2Ul, 'dropdown-menu-right')
         if (nav3Num > 0){
-          for (let i = 0; i < nav3Num; i++) {
-            Class.addClass(nav3[i], 'dropdown-menu-right')
-          }
+          // for (let i = 0; i < nav3Num; i++) {
+          //   Class.addClass(nav3[i], 'dropdown-menu-right')
+          //
+          // }
+          let navMap = Array.prototype.map.call(nav3, function(obj) {
+            return Class.addClass(obj, 'dropdown-menu-right')
+          });
         }
       }
     }
@@ -62,22 +66,12 @@ $(function() {
       if (nav3Num > 0){
         for (let i = 0; i < nav3Num; i++) {
           Class.addClass(nav3[i], 'dropdown-menu-right')
+
         }
       }
     }
 
   }
-  var navx = (o) => {
-    let elt = o,
-      eltNum  = o.length,
-      price = 0,
-      discount = 0,
-      fullPrice  = 0,
-      myArray = [],
-      myObject = {};
-    console.log(o)
-  }
-  navx(elt);
 
 
 });
