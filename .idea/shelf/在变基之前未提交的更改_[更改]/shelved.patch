@@ -1,0 +1,48 @@
+Index: src/example/test/es6/01/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"utf-8\">\n  <title>Function scope example</title>\n  <style>\n    /*strong {*/\n    /*  text-align: center;*/\n    /*}*/\n    /*div {*/\n    /*  display: inline-block;*/\n    /*  width: 150px;*/\n    /*}*/\n    /*div p, ol, table {*/\n    /*  //border: 1px solid blue;*/\n    /*}*/\n    /*span, li, th, td {*/\n    /*  //border: 1px solid green;*/\n    /*}*/\n\n  </style>\n</head>\n<body>\n  <div class=\"header-nav-main\">\n    <ul>\n      <li class=\"dropdown\">\n        <a href=\"#\" class=\"dropdown-item dropdown-toggle\">menu1</a>\n        <ul class=\"dropdown-menu\">\n          <li class=\"dropdown\">\n            <a href=\"#\" class=\"dropdown-item dropdown-toggle\">menu1-1</a>\n            <ul class=\"dropdown-menu\">\n              <li>\n                <a href=\"#\" class=\"dropdown-item dropdown-toggle\">menu1-1-1</a>\n              </li>\n            </ul>\n          </li>\n          <li class=\"dropdown\">\n            <a href=\"#\" class=\"dropdown-item dropdown-toggle\">menu1-2</a>\n            <ul class=\"dropdown-menu\">\n              <li>\n                <a href=\"#\" class=\"dropdown-item dropdown-toggle\">menu1-2-1</a>\n              </li>\n            </ul>\n          </li>\n        </ul>\n      </li>\n      <li class=\"dropdown\">\n        <a href=\"#\">menu2</a>\n      </li>\n      <li class=\"dropdown\">\n        <a href=\"#\">menu3</a>\n      </li>\n    </ul>\n  </div>\n\n<script>\n  class Triple {\n      static triple(n) {\n          if (n === undefined) {\n              n = 1;\n          }\n          return n * 3;\n      }\n  }\n\n  class BiggerTriple extends Triple {\n      static triple(n) {\n          return super.triple(n) * super.triple(n);\n      }\n  }\n\n  // 3\n  console.log(Triple.triple());\n\n  // 18\n  console.log(Triple.triple(6));\n\n  var tp = new Triple();\n\n  // 81\n  console.log(BiggerTriple.triple(3));\n\n  // 報錯\n  // TypeError: tp.triple is not a function\n  // console.log(tp.triple());\n\n</script>\n</body>\n</html>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/example/test/es6/01/index.html b/src/example/test/es6/01/index.html
+--- a/src/example/test/es6/01/index.html	(revision 9ed02c453ab2199e2d4dccc9b68de808cf7bfab7)
++++ b/src/example/test/es6/01/index.html	(date 1648190465956)
+@@ -54,35 +54,8 @@
+   </div>
+ 
+ <script>
+-  class Triple {
+-      static triple(n) {
+-          if (n === undefined) {
+-              n = 1;
+-          }
+-          return n * 3;
+-      }
+-  }
+-
+-  class BiggerTriple extends Triple {
+-      static triple(n) {
+-          return super.triple(n) * super.triple(n);
+-      }
+-  }
+-
+-  // 3
+-  console.log(Triple.triple());
+-
+-  // 18
+-  console.log(Triple.triple(6));
+-
+-  var tp = new Triple();
+-
+-  // 81
+-  console.log(BiggerTriple.triple(3));
+-
+-  // 報錯
+-  // TypeError: tp.triple is not a function
+-  // console.log(tp.triple());
++  function Foo(){}
++  Foo.prototype
+ 
+ </script>
+ </body>
