@@ -23,16 +23,17 @@ module.exports = {
         template: srcExa + 'index/index.pug',
 
     }, ...page},
+    example: {...{
+            title: "header",
+            filename: distPath + 'header.html',
+            template: srcPage + 'header/index.pug',
+
+    }, ...page},
     // example2: {...{
     //         title: "example2",
     //         filename: distPath + 'example2.html',
     //         template: srcPath + 'example/index.pug',
     //
     // }, ...page},
-    // example: {...{
-    //         title: "example",
-    //         filename: distPath + 'example.html',
-    //         template: srcPath + 'example/index.pug',
-    //
-    // }, ...page},
+
 };
