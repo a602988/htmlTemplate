@@ -6,7 +6,8 @@ const app = express();
 const config = require('./build/webpack.dev.conf.js');
 const compiler = webpack(config);
 
-
+// 告知 express 使用 webpack-dev-middleware，
+// 以及将 webpack.config.js 配置文件作为基础配置。
 app.use(
   webpackDevMiddleware(compiler, {
     publicPath: config.output.publicPath,
